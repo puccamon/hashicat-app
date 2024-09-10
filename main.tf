@@ -199,8 +199,16 @@ resource "aws_key_pair" "hashicat" {
 }
 
 ## 11:35AM
-module "s3-bucket" {
-  source              = "cloudposse/s3-bucket/aws"
+# Comment after 12:10PM#module "s3-bucket" {
+# Comment after 12:10PM#  source              = "cloudposse/s3-bucket/aws"
+# Comment after 12:10PM#  version             = "3.1.0"
+# Comment after 12:10PM#  s3_object_ownership = "BucketOwnerEnforced"
+# Comment after 12:10PM#}
+
+## 12:09PM
+## @3-Implement and Manage 
+module "s3_bucket" {
+  source              = "app.terraform.io/WWORG/s3-bucket/aws"
   version             = "3.1.0"
   s3_object_ownership = "BucketOwnerEnforced"
 }
